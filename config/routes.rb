@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'apps/index'
+
+  get 'apps/edit'
+
+  get 'apps/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
