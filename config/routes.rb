@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'apps/index'
+  get 'apps' => 'apps#index', as: 'apps'
 
-  get 'apps/edit'
+  post 'apps' => 'apps#create'
+
+  patch 'apps/:id/' => 'apps#update'
+
+  get 'apps/:id/edit' => 'apps#edit'
 
   get 'apps/new'
 
