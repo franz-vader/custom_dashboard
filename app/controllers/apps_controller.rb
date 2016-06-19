@@ -13,6 +13,7 @@ class AppsController < ApplicationController
       redirect_to apps_path
     else
       render 'edit'
+    end
   end
 
   def new
