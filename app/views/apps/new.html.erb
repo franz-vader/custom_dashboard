@@ -1,2 +1,15 @@
-<h1>Apps#new</h1>
-<p>Find me in app/views/apps/new.html.erb</p>
+<h2>add new App</h2>
+<%= form_for(@app) do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<p><%= link_to "back to apps list", apps_path %></p>
