@@ -32,7 +32,7 @@ class AppsController < ApplicationController
   private
 
   def app_params
-    params.require(:app).premit(:title, :url)
+    params.require(:app).permit(:title, :url)
   end
 
 end
