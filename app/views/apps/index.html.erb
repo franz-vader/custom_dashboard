@@ -2,6 +2,8 @@
 <ul>
 <% @apps.each do |app|%>
   <li><%= link_to app.title, app.url %>
+  (<%= link_to "edit", edit_app_path(app) %>)
+  </li>
 <% end %>
 </ul>
 <p>
