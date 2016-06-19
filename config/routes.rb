@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   get 'apps' => 'apps#index', as: 'apps'
 
+  get 'apps/new', as: 'new_app'
+
+  get 'apps/:id/edit' => 'apps#edit', as: 'edit_app'
+
   post 'apps' => 'apps#create'
 
   patch 'apps/:id/' => 'apps#update'
 
-  get 'apps/:id/edit' => 'apps#edit'
+  delete 'apps/:id/' => 'apps#desptroy', as: 'delete_app'
 
-  get 'apps/new'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
