@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-  get 'apps' => 'apps#index', as: 'apps'
 
-  get 'apps/new', as: 'new_app'
+  resources :apps
 
-  get 'apps/:id/edit' => 'apps#edit', as: 'edit_app'
-
-  post 'apps' => 'apps#create'
-
-  patch 'apps/:id/' => 'apps#update'
-
-  delete 'apps/:id/' => 'apps#desptroy', as: 'delete_app'
+#  get 'apps' => 'apps#index', as: 'apps'
+#
+#  get 'apps/new', as: 'new_app'
+#
+#  get 'apps/:id/edit' => 'apps#edit', as: 'edit_app'
+#
+#  post 'apps' => 'apps#create'
+#
+#  patch 'apps/:id/' => 'apps#update'
+#
+#  delete 'apps/:id/' => 'apps#desptroy', as: 'delete_app'
 
 
 
